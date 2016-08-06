@@ -1,0 +1,33 @@
+{
+    "name": "root/fluent-facebook",
+    "description": "A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax",
+    "type": "library",
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : "~5.5|~7.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nhasnayeen",
+            "email": "nehal.hasnayeen@gagagugu.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hasnayeen\\FluentFacebook\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hasnayeen\\FluentFacebook\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
