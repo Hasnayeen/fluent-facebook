@@ -21,8 +21,9 @@ abstract class Node
         return Request::get(null, $this->endpoint, ['query' => $query]);
     }
 
-    public function with($fields)
+    public function with(array $fields)
     {
+        $fields = implode(",", $fields);
         $this->fields = $fields;
 
         return $this;

@@ -45,4 +45,11 @@ class User extends Node
 
         return $this;
     }
+
+    public function albums()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
 }

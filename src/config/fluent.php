@@ -19,6 +19,7 @@ return [
     ],
 
     'user_model' => 'user',
+    'user_table_name' => 'users',
     'user_model_namespace' => 'App',
 
      /*
@@ -31,7 +32,7 @@ return [
     |
     */
 
-    'scope' => [
+    'scopes' => [
         "public_profile" => false,
         "user_friends" => false,
         "email" => true,

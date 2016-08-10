@@ -22,10 +22,7 @@ class Photo extends Node
 
     public function __call($method, $parameters)
     {
-        dd($method);
-        $class = $this->createClass($method);
-
-        return $this->defaultCall($class); 
+        return $this->createClass($method);
     }
 
     public function posts()

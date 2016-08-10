@@ -22,8 +22,6 @@ class Post extends Node
 
     public function __call($method, $parameters)
     {
-        $class = $this->createClass($method);
-
-        return $this->defaultCall($class); 
+        return $this->createClass($method);
     }
 }
