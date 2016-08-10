@@ -1,8 +1,8 @@
 <?php
 
-namespace Hasnayeen\Fluent\Core;
+namespace Iluminar\Fluent\Core;
 
-use Hasnayeen\Fluent\Core\Request;
+use Iluminar\Fluent\Core\Request;
 
 abstract class Node
 {

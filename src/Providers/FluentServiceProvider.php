@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Fluent\Providers;
+namespace Iluminar\Fluent\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,7 @@ class FluentServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Hasnayeen\Fluent\Controllers';
+    protected $namespace = 'Iluminar\Fluent\Controllers';
 
     /**
      * Bootstrap the application services.
@@ -45,6 +45,6 @@ class FluentServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Hasnayeen\Fluent\Controllers\FluentAuthController');
+        $this->app->make('Iluminar\Fluent\Controllers\FluentAuthController');
     }
 }

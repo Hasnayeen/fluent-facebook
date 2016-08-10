@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Fluent\Core;
+namespace Iluminar\Fluent\Core;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Collection;

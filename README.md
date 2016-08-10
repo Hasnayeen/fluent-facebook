@@ -56,7 +56,7 @@ After updating composer, add a fluent service provider to the providers array in
 ``` php
  'providers' => array(
         // ...
-        Hasnayeen\Fluent\Providers\FluentServiceProvider::class,
+        Iluminar\Fluent\Providers\FluentServiceProvider::class,
     )
 ```
 

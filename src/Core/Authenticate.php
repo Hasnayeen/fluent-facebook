@@ -1,10 +1,10 @@
 <?php
 
-namespace Hasnayeen\Fluent\Core;
+namespace Iluminar\Fluent\Core;
 
 use App\User;
 use GuzzleHttp\ClientInterface;
-use Hasnayeen\Fluent\Core\Request as FluentRequest;
+use Iluminar\Fluent\Core\Request as FluentRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;

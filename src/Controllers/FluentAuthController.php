@@ -1,11 +1,11 @@
 <?php
 
-namespace Hasnayeen\Fluent\Controllers;
+namespace Iluminar\Fluent\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
-use Hasnayeen\Fluent\Core\Authenticate;
+use Iluminar\Fluent\Core\Authenticate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;

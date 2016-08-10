@@ -1,9 +1,9 @@
 <?php
 
-namespace Hasnayeen\Fluent\Node;
+namespace Iluminar\Fluent\Node;
 
-use Hasnayeen\Fluent\Core\Node;
-use Hasnayeen\Fluent\Core\Request;
+use Iluminar\Fluent\Core\Node;
+use Iluminar\Fluent\Core\Request;
 
 /**
 * This class represents a user in facebook graph api
