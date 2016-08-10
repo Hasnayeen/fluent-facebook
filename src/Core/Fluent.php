@@ -2,13 +2,10 @@
 
 namespace Iluminar\Fluent\Core;
 
-use Iluminar\Fluent\Core\NodeFactory;
-use Iluminar\Fluent\Core\Request;
-
 class Fluent
 {
     public $user;
-    
+
     public function __construct($user)
     {
         $this->user = $user;

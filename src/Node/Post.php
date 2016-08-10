@@ -3,11 +3,10 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents an individual entry in a profile's feed in facebook social graph
-*/
+ * This class represents an individual entry in a profile's feed in facebook social graph.
+ */
 class Post extends Node
 {
     public $id;

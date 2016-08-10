@@ -6,8 +6,8 @@ use Iluminar\Fluent\Core\Node;
 use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents a user in facebook graph api
-*/
+ * This class represents a user in facebook graph api.
+ */
 class Photo extends Node
 {
     public $id;
@@ -27,6 +27,6 @@ class Photo extends Node
 
     public function posts()
     {
-        return Request::get($this->id . '/posts', ['access_token' => $this->token]);
+        return Request::get($this->id.'/posts', ['access_token' => $this->token]);
     }
 }
