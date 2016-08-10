@@ -8,7 +8,7 @@ $fluent = new Fluent($user);
 $user = $fluent->user($user->fb_id)->get();
 ```
 
-That's it. The $user object is collection of facebook user data. If you want extra information like about, first_name, education etc. just pass an array with the field name in `with` method.
+That's it. The $user object is a `Illuminate\Support\Collection` object of facebook user data. If you want extra information like about, first_name, education etc. just pass an array with the field name in `with` method.
 ``` php
 $user = Auth::user();
 $fluent = new Fluent($user);
@@ -115,11 +115,11 @@ Yet to be added.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at searchimg.nehal@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Laravel, please send an e-mail to Nehal Hasnayeen at searching.nehal@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The `Fluent-facebook` is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The **Fluent-facebook** is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 ## Change log
 
