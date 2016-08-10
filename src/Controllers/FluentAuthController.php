@@ -3,13 +3,11 @@
 namespace Iluminar\Fluent\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use App\User;
-use Iluminar\Fluent\Core\Authenticate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
-use Laravel\Socialite\Facades\Socialite;
+use Iluminar\Fluent\Core\Authenticate;
 
 class FluentAuthController extends Controller
 {
@@ -22,8 +20,8 @@ class FluentAuthController extends Controller
     {
         $this->request = $request;
         $this->modelNamespace = ucfirst(Config::get('fluent.user_model_namespace', 'app'));
-        $this->modelName = $this->modelNamespace . '\\' . ucfirst(Config::get('fluent.user_model', 'user'));
-        $this->model = new  $this->modelName;
+        $this->modelName = $this->modelNamespace.'\\'.ucfirst(Config::get('fluent.user_model', 'user'));
+        $this->model = new  $this->modelName();
     }
 
     public function redirect()
@@ -40,7 +38,7 @@ class FluentAuthController extends Controller
             $user = $authenticate->user();
             $authUser = $this->findOrCreateUser($user);
             Auth::login($authUser, true);
-     
+
             return redirect('/home');
         } catch (Exception $e) {
             return $e->getMessage();
@@ -48,26 +46,27 @@ class FluentAuthController extends Controller
     }
 
     /**
-     * Return user if exists; create and return if doesn't
+     * Return user if exists; create and return if doesn't.
      *
      * @param $twitterUser
+     *
      * @return User
      */
     private function findOrCreateUser($fbUser)
     {
         $authUser = $this->model->where('fb_id', $fbUser['id'])->first();
- 
-        if ($authUser){
+
+        if ($authUser) {
             return $authUser;
         }
-        $user = new $this->model;
+        $user = new $this->model();
         $user->name = $fbUser['name'];
         $user->token = $fbUser['token'];
         $user->refresh_token = $fbUser['refreshToken'];
         $user->expires_in = $fbUser['expiresIn'];
         $user->fb_id = $fbUser['id'];
         $user->save();
- 
+
         return $user;
     }
 }
