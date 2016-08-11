@@ -3,11 +3,10 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents a user in facebook graph api
-*/
+ * This class represents a user in facebook graph api.
+ */
 class Photo extends Node
 {
     public $id;
@@ -27,28 +26,28 @@ class Photo extends Node
 
     public function likes()
     {
-        $this->endpoint .= '/' . __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function insights()
     {
-        $this->endpoint .= '/' . __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function tags()
     {
-        $this->endpoint .= '/' . __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function comments()
     {
-        $this->endpoint .= '/' . __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }

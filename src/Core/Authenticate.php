@@ -4,19 +4,19 @@ namespace Iluminar\Fluent\Core;
 
 use App\User;
 use GuzzleHttp\ClientInterface;
-use Iluminar\Fluent\Core\Request as FluentRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
+use Iluminar\Fluent\Core\Request as FluentRequest;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class Authenticate
 {
-    const BASE_URL = "https://www.facebook.com/v2.7/dialog/oauth";
-    const GRAPH_URL = "https://graph.facebook.com/v2.7";
-    const TOKEN_URL = "https://graph.facebook.com/oauth/access_token";
-    const RESPONSE_TYPE = "code";
+    const BASE_URL = 'https://www.facebook.com/v2.7/dialog/oauth';
+    const GRAPH_URL = 'https://graph.facebook.com/v2.7';
+    const TOKEN_URL = 'https://graph.facebook.com/oauth/access_token';
+    const RESPONSE_TYPE = 'code';
 
     protected $request;
     protected $clientId;
@@ -42,16 +42,16 @@ class Authenticate
 
     public function getAuthUrl($state)
     {
-        return self::BASE_URL . '?' . $this->getQueryParams($state) . $this->getAllScopes();
+        return self::BASE_URL.'?'.$this->getQueryParams($state).$this->getAllScopes();
     }
 
     public function getAllScopes()
     {
         $scopes = '&scope=';
         foreach (Config::get('fluent.scopes') as $key => $scope) {
-            $scopes .= ($scope) ? $key . ',' : '' ;
+            $scopes .= ($scope) ? $key.',' : '';
         }
-        $scopes = rtrim($scopes, ",");
+        $scopes = rtrim($scopes, ',');
 
         return $scopes;
     }
@@ -59,10 +59,10 @@ class Authenticate
     public function getQueryParams($state)
     {
         $fields = [
-            'client_id' => $this->clientId,
-            'redirect_uri' => $this->redirectUrl,
+            'client_id'     => $this->clientId,
+            'redirect_uri'  => $this->redirectUrl,
             'response_type' => self::RESPONSE_TYPE,
-            'state' => $state
+            'state'         => $state,
         ];
 
         return http_build_query($fields, '', '&', PHP_QUERY_RFC1738);
@@ -79,10 +79,10 @@ class Authenticate
 
         $response = FluentRequest::post(self::TOKEN_URL, [
             $postKey => [
-                'client_id' => $this->clientId,
+                'client_id'     => $this->clientId,
                 'client_secret' => $this->clientSecret,
-                'redirect_uri' => $this->redirectUrl,
-                'code' => $code,
+                'redirect_uri'  => $this->redirectUrl,
+                'code'          => $code,
             ],
         ]);
         $data = [];
@@ -106,9 +106,9 @@ class Authenticate
 
     protected function getUserByToken($token)
     {
-        $meUrl = self::GRAPH_URL .'/me?access_token='.$token.'&fields='.implode(',', $this->fields);
+        $meUrl = self::GRAPH_URL.'/me?access_token='.$token.'&fields='.implode(',', $this->fields);
 
-        if (! empty($this->clientSecret)) {
+        if (!empty($this->clientSecret)) {
             $appSecretProof = hash_hmac('sha256', $token, $this->clientSecret);
 
             $meUrl .= '&appsecret_proof='.$appSecretProof;

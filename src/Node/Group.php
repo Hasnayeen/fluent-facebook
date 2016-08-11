@@ -3,11 +3,10 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents a facebook group in facebook social graph
-*/
+ * This class represents a facebook group in facebook social graph.
+ */
 class Group extends Node
 {
     public $id;

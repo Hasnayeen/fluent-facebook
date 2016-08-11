@@ -3,12 +3,11 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents a single comment in facebook social graph
-*/
-class Comment extends Node
+ * This class represents a single comment in facebook social graph.
+ */
+class Page extends Node
 {
     public $id;
     public $endpoint;

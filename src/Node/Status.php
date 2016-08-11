@@ -3,11 +3,10 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents a status message in a profile's feed
-*/
+ * This class represents a status message in a profile's feed.
+ */
 class Status extends Node
 {
     public $id;
