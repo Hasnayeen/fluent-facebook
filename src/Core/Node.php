@@ -2,8 +2,6 @@
 
 namespace Iluminar\Fluent\Core;
 
-use Iluminar\Fluent\Core\Request;
-
 abstract class Node
 {
     protected $token;
@@ -23,7 +21,7 @@ abstract class Node
 
     public function with(array $fields)
     {
-        $fields = implode(",", $fields);
+        $fields = implode(',', $fields);
         $this->fields = $fields;
 
         return $this;

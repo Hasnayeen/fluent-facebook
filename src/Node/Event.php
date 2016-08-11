@@ -3,11 +3,10 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents an event in facebook social graph
-*/
+ * This class represents an event in facebook social graph.
+ */
 class Event extends Node
 {
     public $id;

@@ -3,11 +3,10 @@
 namespace Iluminar\Fluent\Node;
 
 use Iluminar\Fluent\Core\Node;
-use Iluminar\Fluent\Core\Request;
 
 /**
-* This class represents a album in facebook graph api
-*/
+ * This class represents a album in facebook graph api.
+ */
 class Album extends Node
 {
     public $id;
