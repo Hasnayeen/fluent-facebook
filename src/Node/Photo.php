@@ -25,8 +25,31 @@ class Photo extends Node
         return $this->createClass($method);
     }
 
-    public function posts()
+    public function likes()
     {
-        return Request::get($this->id . '/posts', ['access_token' => $this->token]);
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
+
+    public function insights()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
+
+    public function tags()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
+
+    public function comments()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
     }
 }

@@ -113,9 +113,11 @@ First you need to instantiate a Fluent instance with a user object as paramter.
 $fluent = new Fluent(Auth::user());
 ```
 Facebook information is represented as a social graph which composed of following three things
-> nodes - basically "things" such as a User, a Photo, a Page, a Comment
-> edges - the connections between those "things", such as a Page's Photos, or a Photo's Comments
-> fields - info about those "things", such as a person's birthday, or the name of a Page
+> `nodes` - basically "things" such as a User, a Photo, a Page, a Comment
+
+> `edges` - the connections between those "things", such as a Page's Photos, or a Photo's Comments
+
+> `fields` - info about those "things", such as a person's birthday, or the name of a Page
 
 Now if you want information about a user or photo, just call a method by that name on `fluent` object, pass the id of that node i.e id of the user or photo and chained that with `get` method which will return a collection about that node.
 ``` php

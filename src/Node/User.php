@@ -52,4 +52,25 @@ class User extends Node
 
         return $this;
     }
+
+    public function books()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
+
+    public function groups()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
+
+    public function likes()
+    {
+        $this->endpoint .= '/' . __FUNCTION__;
+
+        return $this;
+    }
 }
