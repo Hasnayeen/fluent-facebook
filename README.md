@@ -1,12 +1,14 @@
 # Fluent-Facebook
 ###### alpha version
+[![License](https://poser.pugx.org/iluminar/fluent-facebook/license)](https://packagist.org/packages/iluminar/fluent-facebook)
+![StyelCI](https://styleci.io/repos/65401645/shield?style=flat)
 
 A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax. Check out how easy it is to read from facebook graph api.
 ``` php
 $user = Auth::user();
 $user = Fluent::user($user->fb_id)->get();
 ```
-That's it. The $user object is a `Illuminate\Support\Collection` object of facebook user data.
+That's it. The $user object is a collection (`Illuminate\Support\Collection`) of facebook user data.
 
 If you want extra information like about, first_name, education etc. just pass an array with the field name in `with` method.
 ``` php
@@ -139,7 +141,11 @@ Yet to be added.
 
 ### TODO
 
+> **publish option**
+
 > **documentation**
+
+> **Error handling**
 
 ## Security Vulnerabilities
 
