@@ -1,4 +1,5 @@
 # Fluent-Facebook
+###### alpha version
 
 A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax. Check out how easy it is to read to facebook graph api.
 
@@ -104,6 +105,34 @@ For user authentication `fluent` use laravel's default users table and user mode
 ### Logging The User Into Laravel
 
 All the routes and authentication logic for authentication via facebook is provided by package. Just add `redirect` route to your login button, it will redirect the user to facebook login dialog box.
+
+### Get different node information
+
+First you need to instantiate a Fluent instance with a user object as paramter.
+``` php
+$fluent = new Fluent(Auth::user());
+```
+Facebook information is represented as a social graph which composed of following three things
+> nodes - basically "things" such as a User, a Photo, a Page, a Comment
+> edges - the connections between those "things", such as a Page's Photos, or a Photo's Comments
+> fields - info about those "things", such as a person's birthday, or the name of a Page
+
+Now if you want information about a user or photo, just call a method by that name on `fluent` object, pass the id of that node i.e id of the user or photo and chained that with `get` method which will return a collection about that node.
+``` php
+$user = $fluent->user($id)->get();
+```
+N.B: The facebook id of the user is saved in fb_id column of the `users` table.
+
+When you retrieving a node information you can also specify the fields for that node to get extra information. For that just pass an array of fields name to the `with` method chained to that node call.
+``` php
+$fields = ['link', 'name', 'album'];
+$photo = $fluent->photo($id)->with($fields)->get();
+```
+
+To get information of an node's edge (e.g photo's comments) just chain a method by the edge name to the node call.
+``` php
+$photo = $fluent->photo($id)->comments()->get();
+```
 
 ## Documentation
 
