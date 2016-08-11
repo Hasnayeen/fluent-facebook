@@ -2,6 +2,7 @@
 
 namespace Iluminar\Fluent\Core;
 
+use Illuminate\Support\Facades\Auth;
 use Iluminar\Fluent\Core\NodeFactory;
 use Iluminar\Fluent\Core\Request;
 
@@ -9,9 +10,9 @@ class Fluent
 {
     public $user;
     
-    public function __construct($user)
+    public function __construct()
     {
-        $this->user = $user;
+        $this->user = Auth::user();
     }
 
     public function __call($method, $parameters)

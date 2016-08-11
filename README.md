@@ -1,35 +1,31 @@
 # Fluent-Facebook
 ###### alpha version
 
-A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax. Check out how easy it is to read to facebook graph api.
-
+A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax. Check out how easy it is to read from facebook graph api.
 ``` php
 $user = Auth::user();
-$fluent = new Fluent($user);
-$user = $fluent->user($user->fb_id)->get();
+$user = Fluent::user($user->fb_id)->get();
 ```
+That's it. The $user object is a `Illuminate\Support\Collection` object of facebook user data.
 
-That's it. The $user object is a `Illuminate\Support\Collection` object of facebook user data. If you want extra information like about, first_name, education etc. just pass an array with the field name in `with` method.
+If you want extra information like about, first_name, education etc. just pass an array with the field name in `with` method.
 ``` php
 $user = Auth::user();
-$fluent = new Fluent($user);
 $fields = ['hometown', 'first_name', 'about', 'birthday', 'cover', 'education'];
-$user = $fluent->user($user->fb_id)->with($fields)->get();
+$user = Fluent::user($user->fb_id)->with($fields)->get();
 ```
 
 If you want to get the feed of the user just chain the feed method to the user object. 
 ``` php
 $user = Auth::user();
-$fluent = new Fluent($user);
-$feed = $fluent->user($user->fb_id)->feed()->get();
+$feed = Fluent::user($user->fb_id)->feed()->get();
 ```
 
 
 If you want to get information of a post just pass the post id to the `post` method. 
 ``` php
 $user = Auth::user();
-$fluent = new Fluent($user);
-$posts = $fluent->post($post_id)->get();
+$posts = Fluent::post($post_id)->get();
 ```
 
 ## Install
@@ -107,11 +103,6 @@ For user authentication `fluent` use laravel's default users table and user mode
 All the routes and authentication logic for authentication via facebook is provided by package. Just add `redirect` route to your login button, it will redirect the user to facebook login dialog box.
 
 ### Get different node information
-
-First you need to instantiate a Fluent instance with a user object as paramter.
-``` php
-$fluent = new Fluent(Auth::user());
-```
 Facebook information is represented as a social graph which composed of following three things
 > `nodes` - basically "things" such as a User, a Photo, a Page, a Comment
 
@@ -119,21 +110,27 @@ Facebook information is represented as a social graph which composed of followin
 
 > `fields` - info about those "things", such as a person's birthday, or the name of a Page
 
+First you need to instantiate a Fluent instance.
+``` php
+$fluent = new Fluent();
+```
+Or if you use `fluent` facade then you dont need a `fluent` instance.
+
 Now if you want information about a user or photo, just call a method by that name on `fluent` object, pass the id of that node i.e id of the user or photo and chained that with `get` method which will return a collection about that node.
 ``` php
-$user = $fluent->user($id)->get();
+$user = Fluent::user($id)->get();
 ```
 N.B: The facebook id of the user is saved in fb_id column of the `users` table.
 
 When you retrieving a node information you can also specify the fields for that node to get extra information. For that just pass an array of fields name to the `with` method chained to that node call.
 ``` php
 $fields = ['link', 'name', 'album'];
-$photo = $fluent->photo($id)->with($fields)->get();
+$photo = Fluent::photo($id)->with($fields)->get();
 ```
 
 To get information of an node's edge (e.g photo's comments) just chain a method by the edge name to the node call.
 ``` php
-$photo = $fluent->photo($id)->comments()->get();
+$photo = Fluent::photo($id)->comments()->get();
 ```
 
 ## Documentation
@@ -146,7 +143,7 @@ Yet to be added.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Nehal Hasnayeen at searching.nehal@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability in the package, please send an e-mail to Nehal Hasnayeen at searching.nehal@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
