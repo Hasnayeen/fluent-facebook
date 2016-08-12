@@ -41,4 +41,11 @@ class Request
 
         return Collection::make($array);
     }
+
+    public static function delete($endpoint, $params = [])
+    {
+        $url = self::API_BASE_URL . $endpoint;
+
+        return self::makeRequest('DELETE', $url, $params);
+    }
 }

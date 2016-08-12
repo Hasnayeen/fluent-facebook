@@ -72,4 +72,11 @@ class User extends Node
 
         return $this;
     }
+
+    public function permissions()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
 }

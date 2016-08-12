@@ -1,7 +1,7 @@
 # Fluent-Facebook
 ###### alpha version
-[![License](https://poser.pugx.org/iluminar/fluent-facebook/license)](https://packagist.org/packages/iluminar/fluent-facebook)
-![StyelCI](https://styleci.io/repos/65401645/shield?style=flat)
+[![License](https://poser.pugx.org/iluminar/fluent-facebook/license?format=flat-square)](https://packagist.org/packages/iluminar/fluent-facebook)
+![StyelCI](https://styleci.io/repos/65401645/shield?style=flat_square)
 
 A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax. Check out how easy it is to read from facebook graph api.
 ``` php
@@ -158,3 +158,7 @@ The **Fluent-facebook** is open-sourced software licensed under the [MIT license
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributor
+
+Made by [Hasnayeen](https://github.com/hasnayeen) with love in ![Bangladesh](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/20px-Flag_of_Bangladesh.svg.png)
