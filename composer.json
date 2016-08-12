@@ -1,6 +1,7 @@
 {
     "name": "iluminar/fluent-facebook",
     "description": "A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax",
+    "keywords": ["laravel", "facebook", "graph-api", "facebook-graph-api"],
     "authors": [
         {
             "name": "nhasnayeen",

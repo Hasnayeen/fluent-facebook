@@ -79,4 +79,144 @@ class User extends Node
 
         return $this;
     }
+
+    public function friendlists()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function friend()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function games()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function movies()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function music()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function objects()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function television()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function home()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function inbox()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function friendrequests()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function notifications()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function outbox()
+    {
+        $this->endpoint .= '/'.__FUNCTION__;
+
+        return $this;
+    }
+
+    public function followers()
+    {
+        $this->endpoint .= '/'. "subscribers";
+
+        return $this;
+    }
+
+    public function following()
+    {
+        $this->endpoint .= '/'. "subscribedto";
+
+        return $this;
+    }
+
+    public function questions()
+    {
+        $this->endpoint .= '/'. __FUNCTION__;
+
+        return $this;
+    }
+ 
+    public function checkins()
+    {
+        $this->endpoint .= '/'. __FUNCTION__;
+
+        return $this;
+    }
+
+    public function videos()
+    {
+        $this->endpoint .= '/'. __FUNCTION__;
+
+        return $this;
+    }
+
+    public function tagged_places()
+    {
+        $this->endpoint .= '/'. __FUNCTION__;
+
+        return $this;
+    }
+
+    public function achievements()
+    {
+        $this->endpoint .= '/'. __FUNCTION__;
+
+        return $this;
+    }
+
+    public function apprequests()
+    {
+        $this->endpoint .= '/'. __FUNCTION__;
+
+        return $this;
+    }
 }
