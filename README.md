@@ -1,7 +1,10 @@
 # Fluent-Facebook
 ###### alpha version
 [![License](https://poser.pugx.org/iluminar/fluent-facebook/license?format=flat-square)](https://packagist.org/packages/iluminar/fluent-facebook)
-![StyelCI](https://styleci.io/repos/65401645/shield?style=flat_square)
+[![StyleCI](https://styleci.io/repos/65401645/shield?branch=master)](https://styleci.io/repos/65401645)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40hasnayeen)](htt$
+
+[Docs](https://iluminar.github.io/README.html)
 
 A laravel 5 package for reading and writing to facebook graph object with ease in laravelish syntax. Check out how easy it is to read from facebook graph api.
 ``` php
@@ -137,13 +140,11 @@ $photo = Fluent::photo($id)->comments()->get();
 
 ## Documentation
 
-Yet to be added.
+[Docs](https://iluminar.github.io/README.html)
 
 ### TODO
 
 > **publish option**
-
-> **documentation**
 
 > **Error handling**
 
