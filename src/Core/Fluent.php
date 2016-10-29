@@ -4,7 +4,6 @@ namespace Iluminar\Fluent\Core;
 
 use Illuminate\Support\Facades\Auth;
 
-
 class Fluent
 {
     public $user;

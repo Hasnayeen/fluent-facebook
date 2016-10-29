@@ -57,10 +57,11 @@ class FluentAuthController extends Controller
         $authUser = $this->model->where('fb_id', $fbUser['id'])->first();
 
         if ($authUser) {
-            if($authUser->token != $fbUser['token']) {
+            if ($authUser->token != $fbUser['token']) {
                 $authUser->token = $fbUser['token'];
                 $authUser->save();
             }
+
             return $authUser;
         }
         $user = new $this->model();
