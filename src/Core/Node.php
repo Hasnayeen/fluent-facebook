@@ -2,8 +2,6 @@
 
 namespace Iluminar\Fluent\Core;
 
-use Iluminar\Fluent\Core\Request;
-
 abstract class Node
 {
     protected $token;
@@ -33,6 +31,6 @@ abstract class Node
     {
         $query = ['access_token' => $this->token];
 
-        return Request::delete($this->endpoint . '/' . $param, ['query' => $query]);
+        return Request::delete($this->endpoint.'/'.$param, ['query' => $query]);
     }
 }
