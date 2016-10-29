@@ -1,8 +1,8 @@
 # Fluent-Facebook
-###### alpha version
+
 [![License](https://poser.pugx.org/iluminar/fluent-facebook/license?format=flat-square)](https://packagist.org/packages/iluminar/fluent-facebook)
 [![StyleCI](https://styleci.io/repos/65401645/shield?branch=master)](https://styleci.io/repos/65401645)
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40hasnayeen)](htt$
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40hasnayeen)](https://twitter.com/nhasnayeen)
 
 [Docs](https://iluminar.github.io/README.html)
 
