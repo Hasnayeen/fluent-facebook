@@ -5,7 +5,7 @@ namespace Iluminar\Fluent\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Laravel\Socialite\SocialiteManager
+ * @see \ Iluminar\Fluent\Core\Fluent
  */
 class Fluent extends Facade
 {

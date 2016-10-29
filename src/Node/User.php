@@ -87,7 +87,7 @@ class User extends Node
         return $this;
     }
 
-    public function friend()
+    public function friends()
     {
         $this->endpoint .= '/'.__FUNCTION__;
 
