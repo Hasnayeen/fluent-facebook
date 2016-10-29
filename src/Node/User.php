@@ -166,56 +166,56 @@ class User extends Node
 
     public function followers()
     {
-        $this->endpoint .= '/'. "subscribers";
+        $this->endpoint .= '/'.'subscribers';
 
         return $this;
     }
 
     public function following()
     {
-        $this->endpoint .= '/'. "subscribedto";
+        $this->endpoint .= '/'.'subscribedto';
 
         return $this;
     }
 
     public function questions()
     {
-        $this->endpoint .= '/'. __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
- 
+
     public function checkins()
     {
-        $this->endpoint .= '/'. __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function videos()
     {
-        $this->endpoint .= '/'. __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function tagged_places()
     {
-        $this->endpoint .= '/'. __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function achievements()
     {
-        $this->endpoint .= '/'. __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
 
     public function apprequests()
     {
-        $this->endpoint .= '/'. __FUNCTION__;
+        $this->endpoint .= '/'.__FUNCTION__;
 
         return $this;
     }
