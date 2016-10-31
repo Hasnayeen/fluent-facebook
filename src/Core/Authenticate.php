@@ -28,9 +28,9 @@ class Authenticate
     public function __construct(Request $request)
     {
         $this->request = $request;
-        $this->clientId = Config::get('services.facebook.client_id');
-        $this->clientSecret = Config::get('services.facebook.client_secret');
-        $this->redirectUrl = Config::get('services.facebook.redirect');
+        $this->clientId = Config::get('fluent.facebook.client_id');
+        $this->clientSecret = Config::get('fluent.facebook.client_secret');
+        $this->redirectUrl = Config::get('fluent.facebook.redirect');
     }
 
     public function redirect()
