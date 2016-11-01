@@ -30,7 +30,7 @@ class Authenticate
         $this->request = $request;
         $this->clientId = Config::get('fluent.facebook.client_id');
         $this->clientSecret = Config::get('fluent.facebook.client_secret');
-        $this->redirectUrl = Config::get('fluent.facebook.redirect');
+        $this->redirectUrl = Config::get('fluent.facebook.redirect_uri');
     }
 
     public function redirect()
