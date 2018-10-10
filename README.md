@@ -108,7 +108,7 @@ For user authentication `fluent` use laravel's default users table and user mode
 All the routes and authentication logic for authentication via facebook is provided by package. Just add `redirect` route to your login button, it will redirect the user to facebook login dialog box.
 
 ### Get different node information
-Facebook information is represented as a social graph which composed of following three things
+Facebook information is represented as a social graph which composed of following three things:
 > `nodes` - basically "things" such as a User, a Photo, a Page, a Comment
 
 > `edges` - the connections between those "things", such as a Page's Photos, or a Photo's Comments
